@@ -1,0 +1,45 @@
+# Build output
+bin/
+obj/
+publish/
+artifacts/
+
+# Visual Studio / VS Code
+.vs/
+.vscode/
+*.suo
+*.user
+*.userosscache
+
+# Rider
+.idea/
+*.sln.iml
+
+# NuGet / packages
+*.nupkg
+.nuget/
+packages/
+project.lock.json
+
+# Runtime / build artifacts
+*.exe
+*.dll
+*.pdb
+*.cache
+*.log
+*.tmp
+*.zip
+
+# Runtime configuration
+*.runtimeconfig.json
+*.deps.json
+
+# OS files
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Secrets / local config
+secrets.json
+src.sln
+appsettings.*.Local.json
