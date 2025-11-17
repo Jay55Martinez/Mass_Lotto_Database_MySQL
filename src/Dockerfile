@@ -23,9 +23,6 @@ WORKDIR /app
 # Copy published files
 COPY --from=publish /app/publish .
 
-# Copy configuration files
-COPY appsettings.json .
-
 # Set environment variable for connection string (will be overridden by docker-compose)
 ENV DB_CONNECTION_STRING=""
 
