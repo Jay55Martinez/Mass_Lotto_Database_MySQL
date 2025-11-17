@@ -1,21 +1,21 @@
 -- ============================================================================
 -- Mass Lottery Database Schema
 -- ============================================================================
--- Database: mass_loto_db
+-- Database: mass_lotto_db
 -- Purpose: Track Massachusetts State Lottery scratch-off ticket games,
 --          prize structures, odds, and remaining prizes
 -- Created: 2025-11-12
 -- ============================================================================
 
 -- Clean slate: Drop existing database if present
-DROP DATABASE IF EXISTS mass_loto_db;
+DROP DATABASE IF EXISTS mass_lotto_db;
 
 -- Create the main database
-CREATE DATABASE mass_loto_db 
+CREATE DATABASE mass_lotto_db 
     CHARACTER SET utf8mb4 
     COLLATE utf8mb4_unicode_ci;
 
-USE mass_loto_db;
+USE mass_lotto_db;
 
 -- ============================================================================
 -- Table: games

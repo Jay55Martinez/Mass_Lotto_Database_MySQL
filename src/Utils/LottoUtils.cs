@@ -2,7 +2,7 @@ using System.Text.RegularExpressions;
 
 namespace src.Utils;
 
-public static class LotoUtils
+public static class LottoUtils
 {
     // Extracts the number of printed tickets from the Massachusetts Lottery API description.
     // Searches for patterns like "approximately X tickets" or "approximately X,XXX,XXX tickets"

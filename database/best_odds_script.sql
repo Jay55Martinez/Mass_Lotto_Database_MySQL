@@ -1,4 +1,4 @@
-USE mass_loto_db;
+USE mass_lotto_db;
 
 SELECT *
 FROM games

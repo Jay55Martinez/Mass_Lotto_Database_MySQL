@@ -43,3 +43,5 @@ desktop.ini
 secrets.json
 src.sln
 appsettings.*.Local.json
+.env
+appsettings.json

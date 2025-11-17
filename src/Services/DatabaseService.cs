@@ -119,7 +119,7 @@ public class DatabaseService
             foreach (var prize in game.PrizeTiers)
             {
                 using var command = new MySqlCommand(prizeQuery, connection, transaction);
-                command.Parameters.AddWithValue("@massGameId", game.MassGameId);  // Use game.MassGameId
+                command.Parameters.AddWithValue("@massGameId", game.MassGameId);
                 command.Parameters.AddWithValue("@tierNumber", prize.TierNumber);
                 command.Parameters.AddWithValue("@prizeAmount", prize.PrizeAmount);
                 command.Parameters.AddWithValue("@totalPrizes", prize.TotalPrizes);
@@ -136,8 +136,16 @@ public class DatabaseService
         }
         catch (Exception ex)
         {
-            transaction.Rollback();
             Console.WriteLine($"Error inserting game: {ex.Message}");
+            try
+            {
+                transaction.Rollback();
+                Console.WriteLine($"Transaction rolled back due to error: {ex.Message}");
+            }
+            catch (Exception rollbackEx)
+            {
+                Console.WriteLine($"Error during rollback: {rollbackEx.Message}");
+            }
             throw;
         }
     }

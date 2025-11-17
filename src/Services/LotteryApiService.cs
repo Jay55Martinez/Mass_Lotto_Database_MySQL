@@ -143,7 +143,7 @@ public class LotteryApiService
                 foreach (var value in contentArray.EnumerateArray())
                 {
                     prizeText = value.GetProperty("value").GetString();
-                    var printedTickets = LotoUtils.ExtractPrintedTickets(prizeText ?? string.Empty);
+                    var printedTickets = LottoUtils.ExtractPrintedTickets(prizeText ?? string.Empty);
                     
                     if (printedTickets.HasValue)
                     {
@@ -154,7 +154,7 @@ public class LotteryApiService
             }
 
             // Extract the number of printed tickets using the utility method
-            // game.AmountPrinted = LotoUtils.ExtractPrintedTickets(prizeText ?? string.Empty);
+            // game.AmountPrinted = LottoUtils.ExtractPrintedTickets(prizeText ?? string.Empty);
 
             // Ensure that all prizetiers are associated with a massGameId
             foreach (var prizeTier in game.PrizeTiers)
